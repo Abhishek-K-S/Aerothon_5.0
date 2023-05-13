@@ -1,5 +1,8 @@
 const User = require('../Models/user.js');
 const jwt = require('jsonwebtoken');
+const FabItem = require('../Models/fab_item.js');
+const SubAssemblyItem = require('../Models/subAssembly_item.js');
+const FabOrder = require('../Models/fab_orders.js');
 
 const userSecret = 'Aerothon5.0ProblemSolution'
 
@@ -102,10 +105,76 @@ const getUserRole = async  (req, res) =>{
     }
 }
 
+const createFabItem = async (req, res) =>{
+    const {itemName, materialsRequired} = req.body;
+    try{
+        await FabItem.create({itemName, materialsRequired})
+        res.status(200).json({'message': "item created"})
+    }
+    catch(err){
+        res.status(400).json({message: 'couldnt create item'})
+    }
+}
+
+const createFabOrder = async (req, res) =>{
+    const {itemID, quantity, inDate, outDate} = req.body
+    try{
+        await FabOrder.create({itemID, quantity, inDate, outDate})
+    }
+    catch(err){
+        res.status(400).json({message: "couldn't create fab item order"})
+    }
+}
+
+const getFabItems = async (req, res)=>{
+    try{
+        let list = [];
+        await FabItem.find().then(result=>{
+            list.push(...result)
+        })
+        res.status(200).json({list})
+    }
+    catch(err){
+        res.status(400).json({message: "couldn't fetch the results"})
+    }
+}
+
+const getFabOrders = async (req, res) =>{
+    try{
+        let list = [];
+        await FabOrder.find().then(result=>{
+            result.forEach(async entry=>{
+                let name = await FabItem.findOne({_id: entry.itemID})
+                list.push({...entry, itemName: name.itemName, itemDescription: name.materialsRequired})
+            })
+        })
+        res.status(200).json({list})
+    }
+    catch(err){
+        res.status(400).json({message: ''})
+    }
+}
+
+const createSubAssemblyProcess = async (req, res) =>{
+    const {processName, fabricationsRequired} = req.body
+    try{
+        await SubAssemblyItem.create({processName, fabricationsRequired})
+    }catch(err){
+        res.status(400).json({message: "error while creating"})
+    }
+}
+
+// const getSubAssemblyProcess = async (req, res)=>{
+//     try{
+//         let list = [];
+//         await 
+//     }
+// }
+
 const logout = (req, res) =>{
     console.log('user loged out');
     res.cookie('jwt', "", { maxAge: 1});
     res.status(200).json({logout: true});
 }
 
-module.exports = { signup, login, logout, verify, getUserRole }
+module.exports = { createFabOrder, getFabOrders, signup, login, logout, verify, getUserRole, createFabItem, getFabItems, createSubAssemblyProcess }

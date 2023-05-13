@@ -15,7 +15,7 @@ const AssemblyTable = () => {
       </h2>
       <table
         id="basic-data-table"
-        class="table nowrap"
+        className="table nowrap"
         style={{ width: "100%" }}
       >
         <thead>

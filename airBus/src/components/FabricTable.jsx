@@ -6,7 +6,7 @@ const FabricTable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getQuery('getview/FABRICATION').then(res=>{
+    getQuery('get/faborder').then(res=>{
       if(!res.error) setData(res.data.list)
     })
   }, [])
@@ -26,7 +26,7 @@ const FabricTable = () => {
       </h2>
       <table
         id="basic-data-table"
-        class="table nowrap"
+        className="table nowrap"
         style={{ width: "100%" }}
       >
         <thead>
@@ -49,12 +49,12 @@ const FabricTable = () => {
             data.map(ele=>{
               return (
                 <tr style={{ border: "1px solid #FFC06E" }}>
-                  <td>Tiger</td>
-                  <td>Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011/04/25</td>
+                  <td>{ele.itemName}</td>
+                  <td>{ele._id}</td>
+                  <td>{ele.materialsRequired}</td>
+                  <td>{ele.quantity}</td>
+                  <td>{ele.inDate}</td>
+                  <td>{ele.outDate}</td>
                 </tr>
               )
             })
