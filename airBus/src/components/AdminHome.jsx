@@ -44,7 +44,7 @@ const AdminHome = () => {
       <header class="header">
         <div class="container">
           <div class="header__logo">
-            <h1 class="header__logo__name">Logo</h1>
+            <h1 class="header__logo__name">InnovateX</h1>
           </div>
           <nav class="header__nav">
             <ul class="header__menu">
