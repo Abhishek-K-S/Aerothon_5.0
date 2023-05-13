@@ -13,6 +13,10 @@ We are team InnovateX. This is our solution to the Airbus 5.0 finale.
 4) Kylo - integration work in progress
 
 
+## ER diagram
+<img src="https://github.com/Abhishek-K-S/Aerothon_5.0/blob/main/er_diagram_sc.png?raw=true" height="450px"/>
+
+
 We have made use of following tech stacks inorder to build a minimum viable application. We have chosen MongoDB because supply chain departments produce enormous amounts of data and can handle realtime data at scale.
 
 
