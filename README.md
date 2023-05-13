@@ -17,7 +17,7 @@ We have made use of following tech stacks inorder to build a minimum viable appl
 
 
 ## Proposed solution
-The proposed solution involves streaming supply chain data of washing machine from various sources to Kylo, performing data transformation to remove redundancy and store the latest forecasted data. This way, there are no redundant data in the data lake, which helps in building a sustainable solution. Let's break down this solution into its various components and tools used.
+The proposed solution involves streaming supply chain data of washing machine from supply chain sources to Kylo, performing data transformation to remove redundancy and store the latest forecasted data. This way, there are no redundant data in the data lake, which helps in building a sustainable solution. Let's break down this solution into its various components and tools used.
 
 
 
