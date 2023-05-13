@@ -1,0 +1,24 @@
+# Logs
+airbus/logs
+airbus/*.log
+airbus/npm-debug.log*
+airbus/yarn-debug.log*
+airbus/yarn-error.log*
+airbus/pnpm-debug.log*
+airbus/lerna-debug.log*
+
+*/node_modules
+*/dist
+*/dist-ssr
+*/*.local
+
+# Editor directories and files
+*/.vscode/*
+*/!.vscode/extensions.json
+*/.idea
+*/.DS_Store
+*/*.suo
+*/*.ntvs*
+*/*.njsproj
+*/*.sln
+*/*.sw?

@@ -1,0 +1,50 @@
+.btn {
+  background-color: #20ab6c;
+  height: 40px;
+  font-size: 1.2rem;
+  width: 80%;
+  padding: 0px;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+.form-group {
+  margin-left: 10%;
+  margin-bottom: 4%;
+  width: 80%;
+  justify-content: space-between;
+}
+input {
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 100%;
+  padding: 10px;
+}
+select {
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 75%;
+  padding: 10px;
+}
+.con {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 2px;
+  color: rgb(111, 103, 103);
+  font-size: 13px;
+  font-family: sans-serif;
+  background-color: rgba(255, 0, 0, 0);
+  margin-left: 10%;
+}
+.con a {
+  color: rgb(0, 136, 255);
+}
+option {
+  padding: 10px;
+}
+.btn:hover {
+  background-color: #20ab6c;
+  color: initial;
+  border-color: initial;
+}
