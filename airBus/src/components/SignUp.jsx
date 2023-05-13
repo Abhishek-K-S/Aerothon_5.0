@@ -90,7 +90,7 @@ const SignUp = () => {
           </label>
           <select name="roles" id="roles" placeholder="Roles" onChange={e=>setRole(e.target.value)}>
             <option value="FABRICATION" selected>Fabrication</option>
-            <option value="SUB_ASSEMBLY">Sub Assembly</option>
+            <option value="SUB-ASSEMBLY">Sub Assembly</option>
             <option value="ASSEMBLY">Assembly</option>
           </select>
         </div>
