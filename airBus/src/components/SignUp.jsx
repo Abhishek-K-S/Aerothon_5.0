@@ -48,10 +48,10 @@ const SignUp = () => {
         Sign Up
       </h2>
       <form>
-        <div class="form-group">
+        <div className="form-group">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="username"
             placeholder="Name"
             onChange={(e)=>{setName(e.target.value); setErr(false)}}
@@ -59,10 +59,10 @@ const SignUp = () => {
           />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="email"
             placeholder="Email"
             onChange={e=>{setEmail(e.target.value); setErr(false)}}
@@ -70,10 +70,10 @@ const SignUp = () => {
           />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="password"
             placeholder="Password"
             onChange={e=>{setPassword(e.target.value);setErr(false)}}
@@ -81,7 +81,7 @@ const SignUp = () => {
           />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
           <label
             htmlFor="roles"
             style={{ width: "25%", marginRight: "5%", fontSize: "1.2rem" }}
@@ -90,17 +90,17 @@ const SignUp = () => {
           </label>
           <select name="roles" id="roles" placeholder="Roles" onChange={e=>setRole(e.target.value)}>
             <option value="FABRICATION" selected>Fabrication</option>
-            <option value="SUB_ASSEMBLY">Sub Assembly</option>
+            <option value="SUB-ASSEMBLY">Sub Assembly</option>
             <option value="ASSEMBLY">Assembly</option>
           </select>
         </div>
         {err && <span style={{color: 'red'}}>Invalid Details</span>}
 
-        <button type="submit" class="btn" onClick={handleSignUp}>
+        <button type="submit" className="btn" onClick={handleSignUp}>
           Sign Up
         </button>
       </form>
-      <div class="con">
+      <div className="con">
         <p>Already have account?&nbsp;</p>
         <Link to="/login"> login</Link>
       </div>
