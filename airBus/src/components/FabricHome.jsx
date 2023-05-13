@@ -29,6 +29,9 @@ const FabricHome = () => {
       case "addnewdata":
         componentToRender = <AddFrabircation />;
         break;
+      case "schedule":
+        componentToRender = <ScheduleProcess />;
+        break;
 
       default:
         componentToRender = <FabricTable />;
@@ -59,7 +62,15 @@ const FabricHome = () => {
                 </a>
               </li>
               <li class="header__item">
-              <span class="header__link" onClick={handleLogout}>
+                <a
+                  class="header__link"
+                  onClick={() => handleOptionClick("schedule")}
+                >
+                  Schedule New Process
+                </a>
+              </li>
+              <li class="header__item">
+                <span class="header__link" onClick={handleLogout}>
                   Logout
                 </span>
               </li>

@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/header.css";
 import AssemblyTable from "./AssemblyTable";
 import { getQuery } from "../axiosService";
+import ScheduleSubAssemble from "./ScheduleSubAssemble";
 
 const AssembleHome = () => {
   let componentToRender;
@@ -28,6 +29,9 @@ const AssembleHome = () => {
 
     case "addnewdata":
       componentToRender = <AddAssembly />;
+      break;
+    case "schedule":
+      componentToRender = <ScheduleSubAssemble />;
       break;
 
     default:
@@ -56,6 +60,14 @@ const AssembleHome = () => {
                   onClick={() => handleOptionClick("addnewdata")}
                 >
                   Add New Data
+                </a>
+              </li>
+              <li class="header__item">
+                <a
+                  class="header__link"
+                  onClick={() => handleOptionClick("schedule")}
+                >
+                  Scehdule Sub Assemble
                 </a>
               </li>
               <li class="header__item">

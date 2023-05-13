@@ -33,7 +33,7 @@ const AddSubAssebmly = () => {
             // className="inputHold"
             style={{ width: "50%", display: "flex" }}
           >
-            <label htmlFor="item">Item : </label>
+            <label htmlFor="item">SubAssembly Name : </label>
           </div>
           <input
             placeholder={"Item"}
@@ -52,75 +52,19 @@ const AddSubAssebmly = () => {
             // className="inputHold"
             style={{ width: "50%", display: "flex" }}
           >
-            <label htmlFor="item">Raw Material : </label>
+            <label htmlFor="item">Item : </label>
           </div>
 
-          <input
-            placeholder={"Raw Material"}
-            style={{ marginBottom: "10px", width: "450px" }}
-            id={"raw_material"}
-          />
-        </div>
-        <div
-          style={{
-            // display: "flex",
-            // flexDirection: "column",
-            marginTop: "3%",
-          }}
-        >
-          <div
-            // className="inputHold"
-            style={{ width: "50%", display: "flex" }}
+          <select
+            name="sub_assembly"
+            id="sub_assembly"
+            placeholder="Roles"
+            style={{ width: "450px" }}
           >
-            <label htmlFor="item">Quantity : </label>
-          </div>
-
-          <input
-            placeholder={"Quantity"}
-            style={{ marginBottom: "10px", width: "450px" }}
-            id={"quantity"}
-          />
+            <option value="sub_1">tub</option>
+          </select>
         </div>
-        <div
-          style={{
-            // display: "flex",
-            // flexDirection: "column",
-            marginTop: "3%",
-          }}
-        >
-          <div
-            // className="inputHold"
-            style={{ width: "50%", display: "flex" }}
-          >
-            <label htmlFor="indate">In date : </label>
-          </div>
-
-          <input
-            placeholder={"In date"}
-            style={{ marginBottom: "10px", width: "450px" }}
-            id={"indate"}
-          />
-        </div>
-        <div
-          style={{
-            // display: "flex",
-            // flexDirection: "column",
-            marginTop: "3%",
-          }}
-        >
-          <div
-            // className="inputHold"
-            style={{ width: "50%", display: "flex" }}
-          >
-            <label htmlFor="outdate">Out date : </label>
-          </div>
-
-          <input
-            placeholder={"Out date : "}
-            style={{ marginBottom: "10px", width: "450px" }}
-            id={"outdate"}
-          />
-        </div>
+        
 
         <div
           style={{
@@ -130,7 +74,7 @@ const AddSubAssebmly = () => {
           }}
         >
           <button type="submit" className="btn" style={{ width: "450px" }}>
-            Add Data
+            Add SubAssembly
           </button>
         </div>
       </form>
