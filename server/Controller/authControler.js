@@ -6,6 +6,8 @@ const userSecret = 'Aerothon5.0ProblemSolution'
 const ROLES = Object.freeze({
     admin: 'ADMIN',
     fab: 'FABRICATION',
+    subAssembly: 'SUB-ASSEMBLY',
+    assembly: 'ASSEMBLY'
 })
 
 const createJWT = (id) =>{
