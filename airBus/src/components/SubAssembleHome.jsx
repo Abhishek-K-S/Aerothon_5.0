@@ -38,31 +38,31 @@ const SubAssembleHome = () => {
     }
   return (
     <>
-      <header class="header">
-        <div class="container">
-          <div class="header__logo">
-            <h1 class="header__logo__name">InnovateX</h1>
+      <header className="header">
+        <div className="container">
+          <div className="header__logo">
+            <h1 className="header__logo__name">InnovateX</h1>
           </div>
-          <nav class="header__nav">
-            <ul class="header__menu">
-              <li class="header__item">
+          <nav className="header__nav">
+            <ul className="header__menu">
+              <li className="header__item">
                 <a
-                  class="header__link"
+                  className="header__link"
                   onClick={() => handleOptionClick("SubAssemblyTable")}
                 >
                   Data
                 </a>
               </li>
-              <li class="header__item">
+              <li className="header__item">
                 <a
-                  class="header__link"
+                  className="header__link"
                   onClick={() => handleOptionClick("addnewdata")}
                 >
                   Add New Data
                 </a>
               </li>
-              <li class="header__item">
-                <span class="header__link"  onClick={handleLogout}>
+              <li className="header__item">
+                <span className="header__link"  onClick={handleLogout}>
                   Logout
                 </span>
               </li>
