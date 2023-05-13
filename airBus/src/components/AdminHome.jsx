@@ -41,10 +41,10 @@ const AdminHome = () => {
   }
   return (
     <>
-      <header className="header">
-        <div className="container">
-          <div className="header__logo">
-            <h1 className="header__logo__name">Logo</h1>
+      <header class="header">
+        <div class="container">
+          <div class="header__logo">
+            <h1 class="header__logo__name">InnovateX</h1>
           </div>
           <nav className="header__nav">
             <ul className="header__menu">

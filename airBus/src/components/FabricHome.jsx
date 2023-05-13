@@ -29,16 +29,19 @@ const FabricHome = () => {
       case "addnewdata":
         componentToRender = <AddFrabircation />;
         break;
+      case "schedule":
+        componentToRender = <ScheduleProcess />;
+        break;
 
       default:
         componentToRender = <FabricTable />;
     }
   return (
     <>
-      <header className="header">
-        <div className="container">
-          <div className="header__logo">
-            <h1 className="header__logo__name">Logo</h1>
+      <header class="header">
+        <div class="container">
+          <div class="header__logo">
+            <h1 class="header__logo__name">InnovateX</h1>
           </div>
           <nav className="header__nav">
             <ul className="header__menu">
@@ -58,8 +61,21 @@ const FabricHome = () => {
                   Add New Data
                 </a>
               </li>
+<<<<<<< HEAD
+              <li class="header__item">
+                <a
+                  class="header__link"
+                  onClick={() => handleOptionClick("schedule")}
+                >
+                  Schedule New Process
+                </a>
+              </li>
+              <li class="header__item">
+                <span class="header__link" onClick={handleLogout}>
+=======
               <li className="header__item">
               <span className="header__link" onClick={handleLogout}>
+>>>>>>> main
                   Logout
                 </span>
               </li>

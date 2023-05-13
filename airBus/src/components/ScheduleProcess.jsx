@@ -1,7 +1,6 @@
 import React from "react";
 
-
-const AddFrabircation = () => {
+const ScheduleProcess = () => {
   return (
     <div
       style={{
@@ -34,10 +33,33 @@ const AddFrabircation = () => {
           >
             <label htmlFor="item">Item : </label>
           </div>
+          <select
+            name="item"
+            id="item"
+            placeholder="item"
+            style={{ width: "450px" }}
+          >
+            <option value="tub">tub</option>
+          </select>
+        </div>
+        <div
+          style={{
+            // display: "flex",
+            // flexDirection: "column",
+            marginTop: "3%",
+          }}
+        >
+          <div
+            // className="inputHold"
+            style={{ width: "50%", display: "flex" }}
+          >
+            <label htmlFor="item">Quantity : </label>
+          </div>
+
           <input
-            placeholder={"Item"}
+            placeholder={"Quantity"}
             style={{ marginBottom: "10px", width: "450px" }}
-            id={"item"}
+            id={"quantity"}
           />
         </div>
         <div
@@ -51,13 +73,13 @@ const AddFrabircation = () => {
             // className="inputHold"
             style={{ width: "50%", display: "flex" }}
           >
-            <label htmlFor="item">Raw Material : </label>
+            <label htmlFor="indate">In date : </label>
           </div>
 
           <input
-            placeholder={"Raw Material"}
+            placeholder={"In date"}
             style={{ marginBottom: "10px", width: "450px" }}
-            id={"raw_material"}
+            id={"indate"}
           />
         </div>
         <div
@@ -67,8 +89,29 @@ const AddFrabircation = () => {
             marginTop: "3%",
           }}
         >
+          <div
+            // className="inputHold"
+            style={{ width: "50%", display: "flex" }}
+          >
+            <label htmlFor="outdate">Out date : </label>
+          </div>
+
+          <input
+            placeholder={"Out date : "}
+            style={{ marginBottom: "10px", width: "450px" }}
+            id={"outdate"}
+          />
+        </div>
+
+        <div
+          style={{
+            // display: "flex",
+            // flexDirection: "column",
+            marginTop: "3%",
+          }}
+        >
           <button type="submit" className="btn" style={{ width: "450px" }}>
-            Add Data
+            Schedule 
           </button>
         </div>
       </form>
@@ -76,4 +119,4 @@ const AddFrabircation = () => {
   );
 };
 
-export default AddFrabircation;
+export default ScheduleProcess;
